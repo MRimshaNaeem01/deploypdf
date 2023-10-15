@@ -54,7 +54,7 @@ const BarChart = () => {
         }
     };
     useEffect(() => {
-        axios.get('http://localhost:5000/api/data')
+        axios.get('https://deploypdf-d18m.vercel.app/api/data')
             .then(response => {
                 //  setData(response.data);
                 console.log("data", response.data);
