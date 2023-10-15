@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://deploypdf-d18m.vercel.app',
 };
 
 app.use(cors(corsOptions));
