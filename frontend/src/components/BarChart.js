@@ -38,7 +38,7 @@ const BarChart = () => {
             const chartCanvas = document.getElementById('bar-chart');
             const chartImageURL = chartCanvas.toDataURL('image/png');
 
-            axios.post('http://localhost:5000/api/generate-pdf', { data, chartImageURL, crime, leftFooter, rightFooter }, { responseType: 'blob' })
+            axios.post('https://deploypdf-d18m.vercel.app/api/generate-pdf', { data, chartImageURL, crime, leftFooter, rightFooter }, { responseType: 'blob' })
                 .then(response => {
                     const blob = new Blob([response.data], { type: 'application/pdf' });
                     const url = window.URL.createObjectURL(blob);
